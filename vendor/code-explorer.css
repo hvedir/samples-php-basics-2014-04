@@ -1,0 +1,224 @@
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #272822;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-keyword,
+.hljs-literal,
+.hljs-strong,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.tex .hljs-special {
+  color: #F92672;
+}
+
+.hljs {
+  color: #DDD;
+}
+
+.hljs .hljs-constant,
+.asciidoc .hljs-code {
+	color: #66D9EF;
+}
+
+.hljs-code,
+.hljs-class .hljs-title,
+.hljs-header {
+	color: white;
+}
+
+.hljs-link_label,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-value,
+.hljs-regexp {
+	color: #BF79DB;
+}
+
+.hljs-link_url,
+.hljs-tag .hljs-value,
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-emphasis,
+.haskell .hljs-type,
+.hljs-preprocessor,
+.hljs-pragma,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.hljs-javadoc,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt {
+  color: #A6E22E;
+}
+
+.hljs-comment,
+.java .hljs-annotation,
+.smartquote,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.python .hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #75715E;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.css .hljs-id,
+.hljs-phpdoc,
+.hljs-title,
+.hljs-header,
+.haskell .hljs-type,
+.vbscript .hljs-built_in,
+.sql .hljs-aggregate,
+.rsl .hljs-built_in,
+.smalltalk .hljs-class,
+.diff .hljs-header,
+.hljs-chunk,
+.hljs-winutils,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.tex .hljs-special,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+/* EOF Monokai */
+
+body {
+  color: #DDD;
+  background: #272822;
+}
+
+.tree-panel li > a {
+  margin-left: 1em;
+}
+.tree-panel li > a.expand-btn {
+  display: inline-block;
+  background: none transparent;
+  border: 0 none transparent;
+  outline: 0 none;
+  font-weight: bold;
+  color: #ffffa0;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-left: 0;
+  line-height: 150%;
+  vertical-align: middle;
+}
+.tree-panel li.collapsed > a.expand-btn {
+  color: #d2d288;
+}
+.tree-panel li.collapsed > a.expand-btn > span {
+  color: #ab6c00;
+}
+.tree-panel li > a.expand-btn > span.sign {
+  width: 1.5em;
+  vertical-align: text-bottom;
+  display: inline-block;
+}
+.tree-panel li > a.expand-btn > span {
+  color: orange;
+  font-weight: normal;
+  font-size: 1.25em;
+}
+.tree-panel,
+.content {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.tree-panel li > ul {
+  padding-left: 1.8em;
+}
+.tree-panel {
+  transition: all 0.4s ease 0s;
+  margin: 0;
+  padding: 3px;
+  width: 300px;
+  box-sizing: border-box;
+  left: 0;
+}
+.tree-panel {
+  font-size: 16px;
+  line-height: 20px;
+}
+.tree-panel li {
+  list-style: none outside;
+}
+.tree-panel li a.enter-direct {
+  float: right;
+  color: red;
+  font-size: 1em;
+}
+.tree-panel li a {
+  color: #dddddd;
+  text-decoration: none;
+}
+.tree-panel li.collapsed > a{
+  color: darkgrey;
+}
+li.collapsed > ul{
+  display: none;
+}
+.tree-panel a:hover {
+  color: white;
+  text-shadow: 0 0 1px 5px lightgray;
+}
+.content {
+  left: 301px;
+  right: 0;
+}
+.content iframe {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+}

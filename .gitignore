@@ -1,0 +1,5 @@
+.*
+.idea
+.vagrant
+vagrant-env/files/dot/ssh/id_rsa
+vagrant-env/files/dot/ssh/id_rsa.pub

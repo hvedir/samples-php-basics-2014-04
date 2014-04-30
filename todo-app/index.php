@@ -1,0 +1,12 @@
+<html>
+<body>
+<pre>
+<?php
+set_include_path(
+	'/workspace/fake'.PATH_SEPARATOR.get_include_path()
+);
+var_dump(explode(PATH_SEPARATOR,get_include_path()));
+?>
+</pre>
+</body>
+</html>

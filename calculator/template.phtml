@@ -1,0 +1,73 @@
+<?php
+//defined('KALKULATOR') || die('Nie wlasciwy plik');
+if(!defined('KALKULATOR')) {
+// 	die('Nie wlasciwy plik'); 
+// 	echo 'Nie wlasciwy plik';
+	header('Location: http://localhost/2/index.php');
+	exit;
+}
+?>
+<!doctype html>
+<html>
+	<body>
+		<h1>Calkulator</h1>
+		<?php 
+		if(count($_POST)>0){
+			if(false !== $_SESSION['poprzedniWynik']) {
+				echo '<h3>'.$liczba1.' '.$_POST['operator'].' '.$liczba2.' = '.$_SESSION['poprzedniWynik'].'</h3>';
+			} else {
+				echo '<h3 style="color:red;">Cos poszlo nie tak (((</h3>';
+			}
+		}
+		?>
+		<form method="POST">
+		
+		<?php if($pokaz_opcje): ?>
+			<label>
+				<input type="radio" name="uzyj_jako_liczbe_1_wynik_z_sessji" value="tak" checked>
+				Uzyj wynik z poprzedniej operacji: <?php echo $_SESSION['poprzedniWynik']; ?>
+			</label><br>
+			<label>
+				<input type="radio" name="uzyj_jako_liczbe_1_wynik_z_sessji" value="nie">
+				<input type="number" name="recznie_wprowadzona_wartosc_liczby_1" >
+			</label><br>
+		<?php else: ?>
+			<label>
+				<input type="hidden" name="uzyj_jako_liczbe_1_wynik_z_sessji" value="nie">
+				<input type="number" name="recznie_wprowadzona_wartosc_liczby_1" >
+			</label><br>
+		<?php endif; ?>
+			
+			<label>
+				Operator
+				<select name="operator" required>
+					<option selected></option>
+					<option>+</option>
+					<option>-</option>
+					<option>/</option>
+					<option>*</option>
+					<option>%</option>
+					<option>^</option>
+				</select>
+			</label><br>
+				
+		
+		<?php if($pokaz_opcje): ?>
+			<label>
+				<input type="radio" name="uzyj_jako_liczbe_2_wynik_z_sessji" value="tak" checked>
+				Uzyj wynik z poprzedniej operacji: <?php echo $_SESSION['poprzedniWynik']; ?>
+			</label><br>
+			<label>
+				<input type="radio" name="uzyj_jako_liczbe_2_wynik_z_sessji" value="nie">
+				<input type="number" name="recznie_wprowadzona_wartosc_liczby_21" >
+			</label><br>
+		<?php else: ?>
+			<label>
+				<input type="hidden" name="uzyj_jako_liczbe_2_wynik_z_sessji" value="nie">
+				<input type="number" name="recznie_wprowadzona_wartosc_liczby_2" >
+			</label><br>
+		<?php endif; ?>
+			<button type="submit">Oblicz</button>
+		</form>
+	</body>
+</html>
